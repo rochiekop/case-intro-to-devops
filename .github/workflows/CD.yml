@@ -8,7 +8,7 @@ jobs:
 
   build-push:
     name: Build and Push Image to DockerHub
-    runs-on ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
@@ -28,4 +28,3 @@ jobs:
           push: true
           tags: ${{secret.DOCKERHUB_USERNAME}}/flaskapp:${{github.run_number}}
 
-          
