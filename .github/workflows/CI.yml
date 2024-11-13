@@ -2,7 +2,7 @@ name: CI (Continuous Integration)
 
 on:
   pull_request:
-    branches: ['main']
+    branches: [ "main" ]
 
 jobs:
   build-testing:
@@ -23,4 +23,6 @@ jobs:
           sudo docker compose up -d
 
       - name: Testing
-        run: python3 testing/test.py
+        run: 
+          python3 testing/test.py
+  
