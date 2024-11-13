@@ -8,9 +8,6 @@ jobs:
   build-testing:
     name: Build and Testing
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      max-attempts: 3
     
     steps:
       - name: Checkout Repository
