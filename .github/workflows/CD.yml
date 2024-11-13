@@ -2,7 +2,7 @@ name: CD (Continuous Delivery)
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
 
