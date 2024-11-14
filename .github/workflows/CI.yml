@@ -5,24 +5,30 @@ on:
     branches: [ "master" ]
 
 jobs:
+
   build-testing:
     name: Build and Testing
     runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
 
-      - name: Install Docker Compose
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+    
+      - name: Install Docker Compose 
         run: |
           sudo apt-get update
           sudo apt-get install -y docker-compose
-
+      
       - name: Build and Run Container
         run: |
           sudo docker compose up -d
 
+      - name: Install requirements to run Test
+        run : |
+          pip install selenium pytest chromedriver-autoinstaller PyVirtualDisplay
+
       - name: Testing
-        run: 
-          python testing/test.py
+        run: |
+          sleep 10
+          pytest testing/test.py
   
