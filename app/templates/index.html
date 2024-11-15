@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Formulir Absensi</title>
+    <title>Form Absensi Mahasiswa</title>
     <link rel="icon" href="{{ url_for('static', filename='icon.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Form Absensi Mahasiswa</h1>
+    <h1>Form Absensi</h1>
     <form action="/" method="post">
-        <label for="nama">Nama:</label>
+        <label for="nama">Nama Lengkap:</label>
         <input type="text" id="nama" name="nama" required><br><br>
 
-        <label for="nim">NIM:</label>
+        <label for="nim">Nomor Induk Mahasiswa:</label>
         <input type="text" id="nim" name="nim" required><br><br>
 
         <label for="mata_kuliah">Mata Kuliah:</label>
