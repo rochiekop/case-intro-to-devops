@@ -5,6 +5,7 @@ WORKDIR /app
 COPY . .
 
 RUN pip install -r requirements.txt
+RUN pip install --upgrade 'sentry-sdk[flask]'
 
 EXPOSE 5000
 

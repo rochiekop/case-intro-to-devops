@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import os
+from sentry import config
 import psycopg2
 from dotenv import load_dotenv
 load_dotenv()
@@ -10,6 +11,8 @@ usr_pwd = os.environ.get('POSTGRES_PASSWORD')
 hst = os.environ.get('POSTGRES_HOST')
 prt = os.environ.get('POSTGRES_PORT')
 
+
+sentry = config.sentry_config()
 
 app = Flask(__name__)
 # Konfigurasi database
